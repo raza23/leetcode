@@ -6,7 +6,7 @@ class Solution {
         var map: [Int:Int] = [:]
         for i in 0 ..< nums.count {
             if let mapped = map[target - nums[i]] {
-                return [mapped,i]
+                return [mapped, i]
             }
             map[nums[i]] = i 
         }
