@@ -7,13 +7,13 @@ var romanToInt = function(s) {
 
   for (let i = 0; i < s.length; i++) {
     let currInt = dict[s.charAt(i)];
-    let nxtInt = dict[s.charAt(i + 1)];
+    let nextInt = dict[s.charAt(i + 1)];
 
-    if (nxtInt) {
-      if (currInt >= nxtInt) {
+    if (nextInt) {
+      if (currInt >= nextInt) {
         total += currInt;
       } else {
-        total += nxtInt - currInt;
+        total += nextInt - currInt;
         i++;
       }
     } else {
