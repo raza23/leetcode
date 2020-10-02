@@ -1,5 +1,5 @@
 // Day 5
-// 10.12
+// 10.12.
 
 var isHappy = function(n) {
   const previous = new Set();
