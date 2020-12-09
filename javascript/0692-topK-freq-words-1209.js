@@ -1,22 +1,28 @@
-// 12/8
+// 12/9
 
-var topKFrequent = function(words, k) {
-  let map = {};
+var findShortestSubArray = function(nums) {
+  let num_counts = new Map();
+  let degree = 0;
 
-  for (let word of words) {
-    if (!map[word]) {
-      map[word] = 1;
-    } else {
-      map[word]++;
+  let first_seen = new Map();
+  let min_length = 0;
+
+  for (let i = 0; i <= nums.length; i++) {
+    if (!first_seen.has(nums[i])) {
+      first_seen.set(nums[i], i);
+    }
+
+    num_counts.set(
+      nums[i],
+      (num_counts.has(nums[i]) ? num_counts.get(nums[i]) : 0) + 1
+    );
+
+    if (num_counts.get(nums[i]) > degree) {
+      degree = num_counts.get(nums[i]);
+      min_length = i - first_seen.get(nums[i]) + 1;
+    } else if (num_counts.get(nums[i]) === degree) {
+      min_length = Math.min(min_length, i - first_seen.get(nums[i]) + 1);
     }
   }
-
-  let sorted = Object.keys(map).sort((a, b) => {
-    if (map[a] === map[b]) {
-      return a > b ? 1 : -1;
-    } else {
-      return map[b] - map[a];
-    }
-  });
-  return sorted.slice(0, k);
+  return min_length;
 };
