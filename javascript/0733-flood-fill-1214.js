@@ -1,7 +1,7 @@
 // 12/14
 
 var floodFill = function(image, sr, sc, newColor) {
-  if (image[sr][sc] == newColor) {
+  if (image[sr][sc] === newColor) {
     return image;
   }
 
