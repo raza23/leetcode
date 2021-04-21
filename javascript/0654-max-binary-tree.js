@@ -1,3 +1,25 @@
+
+
+
+#!/usr/bin/env node
+
+// 654. Maximum Binary Tree
+// https://leetcode.com/problems/maximum-binary-tree
+
+// Solution
+// ========
+
+// Definition for a binary tree node.
+function TreeNode(val, left, right) {
+    this.val = (val===undefined ? 0 : val)
+    this.left = (left===undefined ? null : left)
+    this.right = (right===undefined ? null : right)
+}
+
+/**
+ * @param {number[]} nums
+ * @return {TreeNode}
+ */
 var constructMaximumBinaryTree = function(nums) {
   if (!nums || nums.length == 0) return null;
 
@@ -44,3 +66,19 @@ function findMaxIndex(nums) {
   console.log("miiiii", maxIndex);
   return maxIndex;
 }
+
+
+// Time and Space Complexity
+// =========================
+// Time Complexity: O(__REPLACE_ME__)
+// Space Complexity: O(__REPLACE_ME__)
+
+
+// Tests
+// =====
+//
+// LeetCode Examples
+console.log(constructMaximumBinaryTree([3, 2, 1, 6, 0, 5]));  // Output: return the tree root node representing the following tree:
+
+// Additional Examples
+// {{ADDITIONAL_EXAMPLES}}
