@@ -28,3 +28,5 @@ var partitionLabels = function(s) {
   }
   return output;
 };
+
+// https://leetcode.com/problems/partition-labels/
