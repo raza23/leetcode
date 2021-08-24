@@ -3,7 +3,7 @@ def two_sum(nums, target)
     nums.each_with_index do |num, index|
       n = target - num
       if table.include?(n)
-          puts table
+        #   puts table
         return [table[n], index]
       else
           
