@@ -8,4 +8,3 @@ class Solution(object):
                 print(d)
             else:
                 d[n] = i
-                print(d)
